@@ -2,7 +2,7 @@ library(sf)
 library(mapdeck)
 
 # Make sure your shapefile is in wgs84 projection. This is what mapdeck and leaflet 
-dgtl <- st_read('input/dgtl.shp')
+dgtl <- st_read('input/dgtlnew.shp')
 
 dgtl$height <- 8.0
 dgtl$color <- '#3BC4D8'
