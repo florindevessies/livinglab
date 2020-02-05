@@ -1,12 +1,12 @@
         function draw(csv) {
           "use strict";
-
+          // create the svg with margins
           var margin = 0,
-            width = 600,
+            width = 800,
             height = 600,
-            maxBarHeight = height / 2 - (margin + 70);
-
-          var innerRadius = 0.1 * maxBarHeight; // innermost circle
+            maxBarHeight = height / 2 - (margin + 80);
+            // Set the inner circle size (radius)
+          var innerRadius = 0.2 * maxBarHeight; // innermost circle
 
           var svg = d3.select('body')
             .append("svg")
@@ -93,22 +93,29 @@
             .attr("r", innerRadius)
             .classed("center-circle", true);
 
+
+            // Function to iterate over csv and decide upon number of categories
           d3.csv(csv, function(error, data) {
 
             var cats = data.map(function(d, i) {
-              return d.category_label;
+              return d.impact;
             });
-
+            console.log(cats);
+            // Count how many of each category you have
             var catCounts = {};
             for (var i = 0; i < cats.length; i++) {
               var num = cats[i];
               catCounts[num] = catCounts[num] ? catCounts[num] + 1 : 1;
             }
-            // remove dupes (not exactly the fastest)
+            console.log(catCounts); 
+            // remove duplicates (not exactly the fastest)
             cats = cats.filter(function(v, i) {
               return cats.indexOf(v) == i;
             });
+            console.log(cats);
+            // create the number of BIG category bars needed
             var numCatBars = cats.length;
+            console.log(cats.length);
 
             var angle = 0,
               rotate = 0;
@@ -116,15 +123,15 @@
             data.forEach(function(d, i) {
               // bars start and end angles
               d.startAngle = angle;
-              angle += (2 * Math.PI) / numCatBars / catCounts[d.category_label];
+              angle += (2 * Math.PI) / numCatBars / catCounts[d.impact];
               d.endAngle = angle;
 
               // y axis minor lines (i.e. questions) rotation
               d.rotate = rotate;
-              rotate += 360 / numCatBars / catCounts[d.category_label];
+              rotate += 360 / numCatBars / catCounts[d.impact];
             });
 
-            // category_label
+            // impact
             var arc_category_label = d3.svg.arc()
               .startAngle(function(d, i) {
                 return (i * 2 * Math.PI) / numCatBars;
@@ -148,6 +155,7 @@
             category_text.each(function(d, i) {
               //Search pattern for everything between the start and the first capital L
               var firstArcSection = /(^.+?)L/;
+              console.log(firstArcSection);
 
               //Grab everything up to the first Line statement
               var newArc = firstArcSection.exec(d3.select(this).attr("d"))[1];
@@ -280,7 +288,7 @@
                 return "#question_label_" + i;
               })
               .text(function(d) {
-                return d.question_label.toUpperCase();
+                return d.source.toUpperCase();
               })
               .call(wrapTextOnArc, maxBarHeight);
 
@@ -321,7 +329,7 @@
                 return i * 100;
               })
               .attrTween("d", function(d, index) {
-                var i = d3.interpolate(d.outerRadius, x_scale(+d.value));
+                var i = d3.interpolate(d.outerRadius, x_scale(+d.value_percent));
                 return function(t) {
                   d.outerRadius = i(t);
                   return arc(d, index);
