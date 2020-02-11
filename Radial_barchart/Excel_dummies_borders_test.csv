@@ -1,0 +1,59 @@
+year,impact,theme,source,kwh ,liters,Km,kg,value,boundary,calculation,value_percent,avg
+2019,CO2,energy_green,Grid,10965,,,,0,5000,0,0,50
+2019,CO2,energy_green,Batteries,15345,,,,0,5000,0,0,50
+2019,CO2,energy_green,Biogas Generator,908,,,,0,5000,0,0,50
+2019,CO2,energy_grey,Generators (back-up),6020,,,,2117,5000,0.4234,42,50
+2019,CO2,energy_grey,Machinery,11200,,,,4700.7,5000,0.94014,94,50
+2019,CO2,food,Cheese,,,,216.52,2446.676,5000,0.4893352,49,50
+2019,CO2,food,Sugar,,,,10,23,5000,0.0046,0,50
+2019,CO2,food,Fruit,,,,859.67,1891.2784,5000,0.37825568,38,50
+2019,CO2,food,Potatoes,,,,885.31,1859.1594,5000,0.37183188,37,50
+2019,CO2,food,Sauces & spices,,,,56.7,113.406,5000,0.0226812,2,50
+2019,CO2,food,Veggies,,,,177.91,355.826,5000,0.0711652,7,50
+2019,CO2,food,Legumes,,,,597.3,1134.8719,5000,0.22697438,23,50
+2019,CO2,food,Cereal products,,,,702.5,1264.5054,5000,0.25290108,25,50
+2019,CO2,mobility_supplier,Car,,,3143.9,,1222.5,5000,0.2445,24,50
+2019,CO2,mobility_supplier,Trailer,,,7926.6,,3102,5000,0.6204,62,50
+2019,CO2,mobility_supplier,Lorry,,,4599.5,,2022.85,5000,0.40457,40,50
+2019,CO2,mobility_supplier,Box truck,,,4029.13,,1486.5,5000,0.2973,30,50
+2019,CO2,mobility_supplier,Delivery van,,,7577.4,,2562.74,5000,0.512548,51,50
+2019,CO2,mobility_artist,train,,,3471,,,5000,0,0,50
+2019,CO2,mobility_artist,flight,,,129241,,45588.55,5000,9.11771,912,50
+2019,NOx,energy_green,Grid,10965,,,,0,100,0,0,50
+2019,NOx,energy_green,Batteries,15345,,,,0,100,0,0,50
+2019,NOx,energy_green,Biogas Generator,908,,,,0,100,0,0,50
+2019,NOx,energy_grey,Generators (back-up),6020,,,,9.159,100,0.09159,9,50
+2019,NOx,energy_grey,Machinery,11200,,,,17.04,100,0.1704,17,50
+2019,NOx,mobility_supplier,Car,,,3143.9,,1.17,100,0.0117,1,50
+2019,NOx,mobility_supplier,Trailer,,,7926.6,,51.11,100,0.5111,51,50
+2019,NOx,mobility_supplier,Lorry,,,4599.5,,21.27,100,0.2127,21,50
+2019,NOx,mobility_supplier,Box truck,,,4029.13,,1.5,100,0.015,2,50
+2019,NOx,mobility_supplier,Delivery van,,,7577.4,,2.83,100,0.0283,3,50
+2019,NOx,mobility_artist,train,,,3471,,,100,0,0,50
+2019,NOx,mobility_artist,flight,,,129241,,1773.2,100,17.732,1773,50
+2019,Chemical pollution,water,Tapwater,,?,,,?,100,#WAARDE!,#WAARDE!,50
+2019,Chemical pollution,water,Toilets,,?,,,?,100,#WAARDE!,#WAARDE!,50
+2019,Waste water,water,Tapwater,,0,,,0,100,0,0,50
+2019,Waste water,water,Toilets,,0,,,0,100,0,0,50
+2019,Unrecycled waste,resources_steel,Shipping containers,,,,428000,0,1,0,0,50
+2019,Unrecycled waste,resources_steel,Fences,,,,45000,0,1,0,0,50
+2019,Unrecycled waste,resources_steel,Tents,,,,14000,0,1,0,0,50
+2019,Unrecycled waste,resources_steel,Large romney,,,,9000,0,1,0,0,50
+2019,Unrecycled waste,resources_steel,Small romneys,,,,9000,0,1,0,0,50
+2019,Unrecycled waste,resources_steel,Lockers,,,,7000,0,1,0,0,50
+2019,Unrecycled waste,resources_steel,Standing tables,,,,1000,0,1,0,0,50
+2019,Unrecycled waste,resources_steel,Bins,,,,1000,0,1,0,0,50
+2019,Unrecycled waste,resources_aluminium,Tents,,,,60000,0,1,0,0,50
+2019,Unrecycled waste,resources_aluminium,Stages,,,,49000,0,1,0,0,50
+2019,Unrecycled waste,resources_wood,Decoration,,,,46000,0,1,0,0,50
+2019,Unrecycled waste,resources_wood,Tables,,,,3000,0,1,0,0,50
+2019,Unrecycled waste,resources_wood,Cable reel,,,,1000,0,1,0,0,50
+2019,Unrecycled waste,resources_electronics,Lights and lazers,,,,25000,0,1,0,0,50
+2019,Unrecycled waste,resources_electronics,Speakers,,,,20000,0,1,0,0,50
+2019,Unrecycled waste,resources_plastics,Decoration,,,,19000,1,1,1,100,50
+2019,Unrecycled waste,resources_pvc,Tents,,,,10000,0,1,0,0,50
+2019,Unrecycled waste,Consumption_materials,Hardcups,,,,12000,0.73,1,0.73,73,50
+2019,Unrecycled waste,Consumption_materials,rPET bottles,,,,440,0,1,0,0,50
+2019,Unrecycled waste,Consumption_materials,Cans,,,,1000,0,1,0,0,50
+2019,Unrecycled waste,Consumption_materials,Tableware,,,,4,0.1,1,0.1,10,50
+2019,Unrecycled waste,Consumption_materials,Cardboard boxes,,,,4,0.1,1,0.1,10,50

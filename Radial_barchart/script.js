@@ -8,7 +8,8 @@
             // Set the inner circle size (radius)
           var innerRadius = 0.2 * maxBarHeight; // innermost circle
 
-          var svg = d3.select('body')
+          var svg = d3
+            .select('body')
             .append("svg")
             .attr("width", width)
             .attr("height", height)
@@ -21,12 +22,14 @@
           var gradients = defs
             .append("linearGradient")
             .attr("id", "gradient-chart-area")
+            // x1 is right, y1 is top, x2 is left, y2 is bottom
             .attr("x1", "50%")
             .attr("y1", "0%")
             .attr("x2", "50%")
             .attr("y2", "100%")
             .attr("spreadMethod", "pad");
 
+            // change color of circle background
           gradients.append("stop")
             .attr("offset", "0%")
             .attr("stop-color", "#EDF0F0")
@@ -37,6 +40,7 @@
             .attr("stop-color", "#ACB7BE")
             .attr("stop-opacity", 1);
 
+            // color and radiant of titles
           gradients = defs
             .append("linearGradient")
             .attr("id", "gradient-questions")
@@ -56,6 +60,7 @@
             .attr("stop-color", "#D4DAE0")
             .attr("stop-opacity", 1);
 
+            // gradient of bars
           gradients = defs
             .append("radialGradient")
             .attr("id", "gradient-bars")
@@ -77,18 +82,23 @@
             .attr("offset", "100%")
             .attr("stop-color", "#AF4427");
 
+          // Adding circles to the svg
+          // outer circle with categories
           svg.append("circle")
             .attr("r", maxBarHeight + 70)
             .classed("category-circle", true);
 
+            // circle with subgroups
           svg.append("circle")
             .attr("r", maxBarHeight + 40)
             .classed("question-circle", true);
 
+            // chart area
           svg.append("circle")
             .attr("r", maxBarHeight)
             .classed("chart-area-circle", true);
 
+            // inner circle 
           svg.append("circle")
             .attr("r", innerRadius)
             .classed("center-circle", true);
@@ -100,22 +110,22 @@
             var cats = data.map(function(d, i) {
               return d.impact;
             });
-            console.log(cats);
+            // console.log(cats);
             // Count how many of each category you have
             var catCounts = {};
             for (var i = 0; i < cats.length; i++) {
               var num = cats[i];
               catCounts[num] = catCounts[num] ? catCounts[num] + 1 : 1;
             }
-            console.log(catCounts); 
+            // console.log(catCounts); 
             // remove duplicates (not exactly the fastest)
             cats = cats.filter(function(v, i) {
               return cats.indexOf(v) == i;
             });
-            console.log(cats);
+            //console.log(cats);
             // create the number of BIG category bars needed
             var numCatBars = cats.length;
-            console.log(cats.length);
+           // console.log(cats.length);
 
             var angle = 0,
               rotate = 0;
@@ -155,7 +165,6 @@
             category_text.each(function(d, i) {
               //Search pattern for everything between the start and the first capital L
               var firstArcSection = /(^.+?)L/;
-              console.log(firstArcSection);
 
               //Grab everything up to the first Line statement
               var newArc = firstArcSection.exec(d3.select(this).attr("d"))[1];
@@ -200,9 +209,12 @@
               .attr("dy", function(d, i) {
                 var startAngle = (i * 2 * Math.PI) / numCatBars,
                   endAngle = ((i + 1) * 2 * Math.PI) / numCatBars;
-                return (startAngle > Math.PI / 2 && startAngle < 3 * Math.PI / 2 && endAngle > Math.PI / 2 && endAngle < 3 * Math.PI / 2 ? -4 : 14);
+                return (startAngle > Math.PI / 2 && startAngle < 3 
+                  * Math.PI / 2 && endAngle > Math.PI / 2 
+                  && endAngle < 3 * Math.PI / 2 ? -4 : 14);
               })
               .append("textPath")
+              // add impact/category labels in the middle
               .attr("startOffset", "50%")
               .style("text-anchor", "middle")
               .attr("xlink:href", function(d, i) {
@@ -220,12 +232,13 @@
               .endAngle(function(d, i) {
                 return d.endAngle;
               })
-              //.innerRadius(maxBarHeight + 2)
-              .outerRadius(maxBarHeight + 2);
-
+              //.innerRadius(maxBarHeight + 2): create size of circle 
+              .outerRadius(maxBarHeight + 15);
+              // try to change angle of text (still needed)
             var question_text = svg.selectAll("path.question_label_arc")
               .data(data)
-              .enter().append("path")
+              .enter()
+              .append("path")
               .classed("question-label-arc", true)
               .attr("id", function(d, i) {
                 return "question_label_" + i;
@@ -242,9 +255,11 @@
               //Replace all the commas so that IE can handle it
               newArc = newArc.replace(/,/g, " ");
 
+              // still needed: change this!!
               //If the end angle lies beyond a quarter of a circle (90 degrees or pi/2)
               //flip the end and start position
-              if (d.startAngle > Math.PI / 2 && d.startAngle < 3 * Math.PI / 2 && d.endAngle > Math.PI / 2 && d.endAngle < 3 * Math.PI / 2) {
+              if (d.startAngle > Math.PI / 2 && d.startAngle < 3 
+                * Math.PI / 2 && d.endAngle > Math.PI / 2 && d.endAngle < 3 * Math.PI / 2) {
                 var startLoc = /M(.*?)A/, //Everything between the capital M and first capital A
                   middleLoc = /A(.*?)0 0 1/, //Everything between the capital A and 0 0 1
                   endLoc = /0 0 1 (.*?)$/; //Everything between the 0 0 1 and the end of the string (denoted by $)
@@ -323,6 +338,20 @@
               .each(function(d) {
                 d.outerRadius = innerRadius;
               })
+              //hover over the bars
+              .on("mouseover", function(d) {    
+            div.transition()    
+                .duration(200)    
+                .style("opacity", .9);    
+            div .html(formatTime(d) + "<br/>"  + d.close)  
+                .style("left", (d3.event.pageX) + "px")   
+                .style("top", (d3.event.pageY - 28) + "px");  
+            })          
+        .on("mouseout", function(d) {   
+            div.transition()    
+                .duration(500)    
+                .style("opacity", 0); 
+        })
               .attr("d", arc);
 
             bars.transition().ease("elastic").duration(1000).delay(function(d, i) {
@@ -352,6 +381,27 @@
               .attr("r", function(d) {
                 return x_scale(d);
               });
+
+                // average arcs
+            var arc_avg = d3.svg
+            .arc()
+            .startAngle(function(d, i) {
+              return d.startAngle;
+            })
+            .endAngle(function(d, i) {
+              return d.endAngle;
+            });
+
+            svg
+            .selectAll('path.avg')
+            .data(data)
+            .enter()
+            .append('path')
+            .classed('avg-gridlines', true)
+            .each(function(d) {
+              d.innerRadius = d.outerRadius = x_scale(d.avg);
+            })
+            .attr('d', arc_avg);
 
             // question lines
             svg.selectAll("line.y.minor")
