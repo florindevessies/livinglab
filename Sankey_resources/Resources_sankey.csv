@@ -1,0 +1,63 @@
+source;target;value
+Shipping containers;Steel;428
+Fences;Steel;45
+Tents (steel);Steel;14
+Large romney;Steel;9
+Small romneys;Steel;9
+Lockers;Steel;7
+Standing tables;Steel;1
+Bins;Steel;1
+Tents (aluminium);Aluminium;60
+Stages;Aluminium;49
+Decoration;Wood;46
+Tables;Wood;3
+Cable reel;Wood;1
+Lights and lazers;Electronics;25
+Speakers;Electronics;20
+Plastics (decoration) ;Infrastructure & Decor;19
+PVC (tents);Tents;10
+Steel;Infrastructure & Decor;513
+Aluminium;Infrastructure & Decor;109
+Wood;Infrastructure & Decor;50
+Electronics;Infrastructure & Decor;45
+Tents;Infrastructure & Decor;10
+Infrastructure & Decor;DGTL;746
+Hardcups;Consumption materials;12
+rPET-bottles;Consumption materials;0.44
+Cans;Consumption materials;0.1
+Tableware;Consumption materials;0.2
+Cardboard boxes;Consumption materials;0.1
+Consumption materials;DGTL;13
+DGTL;Material reuse;744
+DGTL;Hardcups (monoflow);11.1
+DGTL;Demolition;2.5
+DGTL;Sweep;2.28
+DGTL;Glass;1.25
+DGTL;Compostables;0.82
+DGTL;Paper/cardboard;0.79
+DGTL;PBD;0.76
+DGTL;Rough;0.56
+DGTL;rPET-bottles (monoflow);0.39
+DGTL;Cans (monoflow);0.38
+Material reuse;Steel ;513
+Material reuse;Aluminium ;109
+Material reuse;Wood ;49
+Material reuse;Electronics ;45
+Material reuse;Plastics (decoration)   ;18
+Material reuse;PVC (decoration) ;10
+Hardcups (monoflow);Reused CUP KING;11.1
+Demolition;Recyled SUEZ;2.5
+Sweep;Recyled SUEZ;2.28
+Glass;Recyled SUEZ;1.25
+Compostables;Recycled SUEZ (via GP Groot);0.82
+Paper/cardboard;New paper cups (via CUP2PAPER);0.79
+PBD;Recyled SUEZ;0.76
+Rough;Recyled SUEZ;0.56
+rPET-bottles (monoflow);New bottles RPET Lipton/Bar LeDuc;0.39
+Cans (monoflow);HKS melted for new aluminium;0.38
+DGTL;Residual;4.47
+DGTL;Hardcups (waste);0.73
+DGTL;rPET-bottles (waste);0.04
+Residual;Downcycled: City heating SUEZ;4.47
+Hardcups (waste);Downcycled: City heating SUEZ;0.73
+rPET-bottles (waste);Downcycled: City heating SUEZ;0.04
