@@ -1,9 +1,8 @@
 
 .arc text {
-  text-anchor: middle;
+ text-anchor: middle;
  font-family: Raleway;
- font-size: 22px;
- color: red;
+ font-size: 10px;
 }
 
 .arc path {
@@ -19,18 +18,18 @@
     border: 0 none;
     border-radius: 8px 8px 8px 8px;
     box-shadow: -3px 3px 15px #888888;
-    color: red;
+    color: black;
     font-family: 'Raleway';
-    font-size: 22px;
+    font-size: 12px;
     padding: 5px;
     text-align: center;
 }
 
 .legend {
 	font-family: 'Raleway';
-    font-size: 22px;
-	text-align: center;
-    color: red;
+    font-size: 10px;
+	text-align: center;    
+    font-color: #ffffff;
 }
 
 .title {
