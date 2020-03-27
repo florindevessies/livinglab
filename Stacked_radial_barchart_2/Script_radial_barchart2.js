@@ -10,7 +10,8 @@ var svg = d3.select("svg"),
     height = +svg.attr("height"),
     innerRadius = 100,
     outerRadius = Math.min(width, height) / 2,
-    g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+    g = svg.append("g")
+    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
 // create divNode for the hover
 var divNode = d3.select("body").node();
@@ -67,7 +68,7 @@ feMerge.append("feMergeNode")
 /*  var idu = svg.append("idu");
   var unique = idu.append("unique")
   .attr("id", 'drop-shadow');*/
-console.log(g.data(d3.stack().keys(data.columns.slice(1))(data)));
+//console.log(g.data(d3.stack().keys(data.columns.slice(1))(data)));
   // drawing the bars
   g.append("g")
     .selectAll("g")
@@ -75,6 +76,10 @@ console.log(g.data(d3.stack().keys(data.columns.slice(1))(data)));
     .enter().append("g")
       .attr("fill", function(d) { 
         return z(d.key); })
+      .attr('data-column-name', function(d){return d.key})
+      .on("click", function(d){ 
+        window.location.href = "dgtllivinglab.wixsite.com/"+ d.key;
+        } )
     .selectAll("path")
     // I want to append the key to the parts of the g, so I can select these
     .data(function(d) { 
@@ -124,12 +129,7 @@ console.log(g.data(d3.stack().keys(data.columns.slice(1))(data)));
 
           d3.select("#mainTooltip").classed("hidden", true);
       })
-      .on("click", function() 
-        { window.open("https://dgtl.nl/select-your-edition/"); 
-        //$(location).attr('href', url);
-        //window.location = url;    
-    });
-
+      
 
       // creating ALL labels
   var label = g.append("g")
