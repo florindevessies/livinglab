@@ -14,6 +14,7 @@ mapdeck( token = key, style = 'mapbox://styles/mapbox/dark-v9', pitch = 0, paddi
     , destination = c("end_lon", "end_lat")
     , stroke_from = "from"
     , stroke_to = "to"
+    , palette = "bupu"
     , stroke_width = "stroke"
     , auto_highlight = TRUE
     , tooltip = 'mode'
