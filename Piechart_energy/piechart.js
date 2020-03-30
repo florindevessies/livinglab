@@ -46,6 +46,7 @@ var svg = d3.select("body").append("svg")
 
     // add title to svg
     svg.append("text")
+    .style('fill', '#bababa')
     .attr("x", 0 )
     .attr("y", -200)
     .attr('class', 'title')
@@ -75,6 +76,7 @@ const legendGroupTop = svg.append('g')
 			}
 		}); 
   g.append("text")
+  	  .style('fill', '#bababa')
       .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
       .attr("dy", ".35em")
 	  .transition()
@@ -114,6 +116,8 @@ legend.append('rect')
 
 // Legend text
 legend.append('text')
+/*	.atrr('class', 'legend-text')*/
+	.style('fill', '#bababa')
 	.attr('x', legSqr - (legSpace + 10))
 	.attr('y', legSqr + (legSpace * 2.2))
 	.text((d) => { return d; });

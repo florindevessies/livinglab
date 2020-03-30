@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link  id='GoogleFontsLink' href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <script src="https://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="liquidFillGauge.js" language="JavaScript"></script>
+    <style>
+        .liquidFillGaugeText { font-family: Helvetica; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="container">     
+    <div class="svg-container"> 
+        <svg id="fillgauge1" width="33%" height="200"></svg>
+    </div>
+    <div class="txt-container">
+        Blaaaa
+    </div>
+</div>
+
+<div class="container">     
+    <div class="svg-container"> 
+        <svg id="fillgauge2" width="33%" height="200"></svg>
+    </div>
+    <div class="txt-container">
+        Blaaaa
+    </div>
+</div>
+
+<div class="container">     
+    <div class="svg-container"> 
+        <svg id="fillgauge3" width="33%" height="200"></svg>
+    </div>
+    <div class="txt-container">
+        Blaaaa
+    </div>
+</div>
+<svg id="fillgauge2" width="33%" height="200" onclick="gauge2.update(NewValue());"></svg>
+<svg id="fillgauge3" width="33%" height="200" onclick="gauge3.update(NewValue());"></svg>
+<script src= "liquidFillGauge.js"> </script>
+</body>
+</html>

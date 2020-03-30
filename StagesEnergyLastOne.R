@@ -143,8 +143,8 @@ key <- "pk.eyJ1IjoibWllZGVtYXRlcyIsImEiOiJjazV4dmVkbXcyMzQ3M2ttbG5kbzU3bWt4In0.G
 
 # Initialize mapdeck
 # https://symbolixau.github.io/mapdeck/articles/mapdeck.html#the-basics
-mapdeck(token = key, style = mapdeck_style("dark"), pitch = 50, zoom = 6000) %>%
-  add_polygon(
+mapdeck(token = key, style = mapdeck_style("dark"), pitch = 50, zoom = 16 , location = c(4.893868,52.400060)) %>%
+  add_polygon( 
     data = dgtl
     , layer = "polygon_layer"
         , fill_opacity = 225
@@ -153,6 +153,8 @@ mapdeck(token = key, style = mapdeck_style("dark"), pitch = 50, zoom = 6000) %>%
     , auto_highlight = TRUE
     , tooltip = 'hover'
     , update_view = FALSE
+   
+    
   )%>% 
 
 add_arc(
@@ -164,4 +166,3 @@ add_arc(
   , stroke_to = "color_to" 
     , stroke_width = "stroke"
   , update_view = FALSE)
-

@@ -1,6 +1,6 @@
 Impact,Energy,Food,Mobility,Water,Materials
 CO2,19,26,160,0,0
-Nox,524,0,500,0,0
+Nox,524,0,37021,0,0
 Chemical pollution,0,0,0,0,1
-Fresh water use,0,0,0,500,0
+Fresh water use,0,0,0,10624,0
 Residual Waste,0,0,0,0,0.2
