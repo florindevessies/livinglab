@@ -143,7 +143,7 @@ key <- "pk.eyJ1IjoibWllZGVtYXRlcyIsImEiOiJjazV4dmVkbXcyMzQ3M2ttbG5kbzU3bWt4In0.G
 
 # Initialize mapdeck
 # https://symbolixau.github.io/mapdeck/articles/mapdeck.html#the-basics
-mapdeck(token = key, style = mapdeck_style("dark"), pitch = 50, zoom = 6000) %>%
+mapdeck(token = key, style = mapdeck_style("dark"), pitch = 50, zoom = 0) %>%
   add_polygon(
     data = dgtl
     , layer = "polygon_layer"
