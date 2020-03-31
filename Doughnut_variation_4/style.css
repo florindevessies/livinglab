@@ -2,8 +2,8 @@ body {
   font-family: Raleway;
 /*    font-size: 10px;*/
     font-weight: lighter;
-  stroke: #FFFFFF;
-  color: #FFFFFF;
+  stroke: #000000;
+  color: #000000;
   background-color: #ffffff;
 }
 
@@ -11,13 +11,13 @@ body {
 Doughnut layout
 ***************************************/
 #doughnut svg {
-  stroke: #FFFFFF;
+  stroke: #000000;
 }
 
 .axis path,
 .axis line {
   fill: none;
-  stroke: #FFFFFF;
+  stroke: #000000;
   shape-rendering: crispEdges;
 }
 
@@ -29,7 +29,7 @@ Doughnut layout
   opacity: 1;
 }
 circle {
-  stroke: #FFFFFF;
+  stroke: #000000;
   fill: none;
   stroke-width: .5px;
 }
@@ -42,7 +42,7 @@ circle {
 
 #circle-3 {
   stroke-width: 2px;
-  stroke: #FFFFFF;
+  stroke: #000000;
 }
 
 /***************************************
@@ -52,40 +52,40 @@ Stacked barchart layout
   font-family: Raleway;
     font-weight: lighter;
     font-size: 10px;
-  stroke: #FFFFFF;
+  stroke: #000000;
 }
 
 .tick line{
-    stroke: #FFFFFF;
+    stroke: #000000;
 }
 .tick text {
     font-family: Raleway;
     font-size: 10px;
     font-weight: light;
-    fill: #FFFFFF;
+    fill: #000000;
     stroke-width: 0px;
 }
 
 path.domain {
-    stroke: #FFFFFF;
+    stroke: #000000;
 }
 g.axisX {
     font-family: Raleway;
     font-size: 10px;
-    stroke: #FFFFFF;
+    stroke: #000000;
 }
 
 g.legend text{
     font-weight: light;
     font-size: 14px;
-    fill: #FFFFFF;
+    fill: #000000;
     stroke-width: 0px;
 }
 
 #nodata {
     text-align: center;
     position: center;
-    fill: #FFFFFF;
+    fill: #000000;
     stroke-width: 0px;
 }
 
