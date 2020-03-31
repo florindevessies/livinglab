@@ -1,0 +1,91 @@
+body {
+  font-family: Raleway;
+/*    font-size: 10px;*/
+    font-weight: lighter;
+  stroke: #FFFFFF;
+  color: #FFFFFF;
+  background-color: #292726;
+}
+
+/***************************************
+Doughnut layout
+***************************************/
+#doughnut svg {
+  stroke: #FFFFFF;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #FFFFFF;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.segments {
+  opacity: 1;
+}
+circle {
+  stroke: #FFFFFF;
+  fill: none;
+  stroke-width: .5px;
+}
+/* add different boundary at circle 1 */
+
+#circle-1 {
+  stroke-width: 10px;
+  stroke: green;
+}
+
+#circle-3 {
+  stroke-width: 2px;
+  stroke: #FFFFFF;
+}
+
+/***************************************
+Stacked barchart layout
+***************************************/
+#stackedbarchart p{
+  font-family: Raleway;
+    font-weight: lighter;
+    font-size: 10px;
+  stroke: #FFFFFF;
+}
+
+.tick line{
+    stroke: #FFFFFF;
+}
+.tick text {
+    font-family: Raleway;
+    font-size: 10px;
+    font-weight: light;
+    fill: #FFFFFF;
+    stroke-width: 0px;
+}
+
+path.domain {
+    stroke: #FFFFFF;
+}
+g.axisX {
+    font-family: Raleway;
+    font-size: 10px;
+    stroke: #FFFFFF;
+}
+
+g.legend text{
+    font-weight: light;
+    font-size: 14px;
+    fill: #FFFFFF;
+    stroke-width: 0px;
+}
+
+#nodata {
+    text-align: center;
+    position: center;
+    fill: #FFFFFF;
+    stroke-width: 0px;
+}
+
