@@ -18,8 +18,18 @@
     config1.waveOffset = 0.25;
     config1.minValue = 0;
     config1.maxValue = 100;
-    var gauge2= loadLiquidFillGauge("fillgauge2", 91, config1);
-    var gauge3 = loadLiquidFillGauge("fillgauge3", 9);
+
+    function drawFillGauge2() {
+        d3.select("#fillgauge2").selectAll('g').remove();
+        $('#text2').slideToggle();
+        var gauge2= loadLiquidFillGauge("fillgauge2", 91);
+    }
+    function drawFillGauge3() {
+        d3.select("#fillgauge3").selectAll('g').remove();
+        $('#text3').slideToggle();
+        var gauge3 = loadLiquidFillGauge("fillgauge3", 9);
+    }
+
     
     function NewValue(){
         if(Math.random() > .5){
@@ -224,7 +234,7 @@ function loadLiquidFillGauge(elementId, value, config) {
             });
     }
 
-    $('.hierdeclass').on('click', function()
+    $('.button').on('click', function()
         { 
             loadLiquidFillGauge(); 
         })

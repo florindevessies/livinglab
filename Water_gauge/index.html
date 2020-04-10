@@ -6,42 +6,63 @@
 
     <link  id='GoogleFontsLink' href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <script src="https://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+    <!-- jQuery library -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="liquidFillGauge.js" language="JavaScript"></script>
     <style>
         .liquidFillGaugeText { font-family: Helvetica; font-weight: bold; }
     </style>
 </head>
 <body>
-
-<div class="container">     
-    <div class="svg-container"> 
-        <svg id="fillgauge1" width="33%" height="200"></svg>
+<div class="row">
+    <div class="col-sm-4 col-md-offset-2">
+        <div class="container">
+            <div class="svg-container">
+                <svg id="fillgauge1" width="33%" height="200"></svg>
+            </div>
+            <!-- Simple button -->
+            <button type="button" class="btn btn-primary" onclick="drawFillGauge2()">Show me the number!</button>
+        </div>
     </div>
-    <div class="txt-container">
-        Blaaaa
+    <div class="col-sm-4">
+        <p id="text1" style="display: flow">Every sector has their responsibility to use water with care and abstain from waste, and the festival industry is no exception. If we translate the current water usage of DGTL into percentages, we start with the total amount of water used. Can you guess how much hereof goes to toilets?</p>
+    </div>
+
+
+</div>
+<div class="row">
+    <div class="col-sm-4 col-md-offset-2">
+        <div class="container">
+            <div class="svg-container">
+                <svg id="fillgauge2" width="33%" height="200"></svg>
+            </div>
+            <!-- Simple button -->
+            <button type="button" class="btn btn-primary" onclick="drawFillGauge3()">Show me the number!</button>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <p id="text2" style="display: none">In 2019, the majority (91%) of DGTL’s freshwater usage went to flush toilets. The use of clean water to flush toilets is common practice across the Western world. However, it is one habit the world must crucially rethink in order to preserve its most valuable resource. Festivals like DGTL have the unique opportunity to challenge this norm by testing alternatives to freshwater intensive toilets. </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4 col-md-offset-2">
+        <div class="container">
+            <div class="svg-container">
+                <svg id="fillgauge3" width="33%" height="200"></svg>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <p id="text3" style="display: none">This means that, if another approach would be taken for the toilets, only 9% of the total water usage would remain, for example as drinking water. </p>
     </div>
 </div>
 
-<div class="container">     
-    <div class="svg-container"> 
-        <svg id="fillgauge2" width="33%" height="200"></svg>
-    </div>
-    <div class="txt-container">
-        Blaaaa
-    </div>
-</div>
-
-<div class="container">     
-    <div class="svg-container"> 
-        <svg id="fillgauge3" width="33%" height="200"></svg>
-    </div>
-    <div class="txt-container">
-        Blaaaa
-    </div>
-</div>
-<svg id="fillgauge2" width="33%" height="200" onclick="gauge2.update(NewValue());"></svg>
-<svg id="fillgauge3" width="33%" height="200" onclick="gauge3.update(NewValue());"></svg>
 <script src= "liquidFillGauge.js"> </script>
 </body>
 </html>
