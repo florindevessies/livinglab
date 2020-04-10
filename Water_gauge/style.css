@@ -1,4 +1,25 @@
 p {
     text-anchor: middle;
     font-family: Raleway;
+    color: white;
+    font-size: 13px;
+    padding-top: 20px;
+}
+
+body {
+    font-family: Raleway;
+    font-weight: lighter;
+/*    stroke: #FFFFFF;
+    stroke-width: 0px;
+     color: #FFFFFF;
+    fill: #FFFFFF;*/
+    background-color: #292726;
+}
+
+.btn  {
+    margin-top:10px;
+    margin-bottom: 10px;
+    margin-left: 7%;
+    background-color: rgb(23, 139, 202);
+    border-color: rgb(23, 139, 202);
 }
