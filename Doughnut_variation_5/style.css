@@ -1,28 +1,28 @@
 body {
     font-family: Raleway;
     font-weight: lighter;
-    stroke: #FFFFFF;
+    stroke: #E8E6E6;
     stroke-width: 0px;
-     color: #FFFFFF;
-    fill: #FFFFFF;
-    background-color: #292726;
+     color: #E8E6E6;
+    fill: #E8E6E6;
+    background-color: transparent;
 }
 
 /***************************************
 Doughnut layout
 ***************************************/
 #doughnut svg {
-  stroke: #FFFFFF;
+  stroke: #E8E6E6;
 }
 
 g.labels textPath {
-    fill: #FFFFFF;
+    fill: #E8E6E6;
 }
 
 .axis path,
 .axis line {
   fill: none;
-  stroke: #FFFFFF;
+  stroke: #E8E6E6;
   shape-rendering: crispEdges;
 }
 
@@ -34,7 +34,7 @@ g.labels textPath {
   opacity: 1;
 }
 circle {
-  stroke: #FFFFFF;
+  stroke: #E8E6E6;
   fill: none;
   stroke-width: .5px;
 }
@@ -47,7 +47,7 @@ circle {
 
 #circle-3 {
   stroke-width: 2px;
-  stroke: #FFFFFF;
+  stroke: #E8E6E6;
 }
 
 /***************************************
@@ -57,7 +57,7 @@ Stacked barchart layout
   font-family: Raleway;
     font-weight: lighter;
     font-size: 10px;
-  stroke: #FFFFFF;
+  stroke: #E8E6E6;
 }
 
 .tick line{
@@ -68,23 +68,23 @@ Stacked barchart layout
     font-family: Raleway;
     font-size: 10px;
     font-weight: light;
-    fill: #FFFFFF;
+    fill: #E8E6E6;
     stroke-width: 0px;
 }
 
 path.domain {
-    stroke: #FFFFFF;
+    stroke: #E8E6E6;
     stroke-width:0px;
 }
 g.axisY path {
     fill: none;
-    stroke: #FFFFFF;
+    stroke: #E8E6E6;
     stroke-width: 1px;
 }
 
 g.axisX path {
     fill: none;
-    stroke: #FFFFFF;
+    stroke: #E8E6E6;
     stroke-width: 1px;
 
 }
@@ -92,20 +92,20 @@ g.axisX path {
 g.axisX {
     font-family: Raleway;
     font-size: 10px;
-    stroke: #FFFFFF;
-    fill: #FFFFFF;
+    stroke: #E8E6E6;
+    fill: #E8E6E6;
 }
 
 g.legend text{
     font-weight: light;
     font-size: 14px;
-    fill: #FFFFFF;
+    fill: #E8E6E6;
     stroke-width: 0px;
 }
 
 #nodata {
     text-align: center;
-    fill: #FFFFFF;
+    fill: #E8E6E6;
     stroke-width: 0px;
     width: 80%;
     margin-top: 40px;
