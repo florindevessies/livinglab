@@ -55,7 +55,8 @@ Stacked barchart layout
 ***************************************/
 
 #myCheckbox {
-    margin-top: 10%;
+    margin-top: 4%;
+    margin-left: 10%;
 }
 #stackedbarchart p{
   font-family: Raleway;

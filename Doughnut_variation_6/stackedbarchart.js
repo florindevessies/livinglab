@@ -15,18 +15,11 @@ var metadata = {
     "Residual waste" : {'title': "Festival systems responsible for DGTL's residual waste", 'yTitle': 'tonnes'}
     };
 
-/*var metadata = {
-    "CO2": "Festival systems responsible for DGTL's CO2 emissions",
-    "NOx" : "Festival systems responsible for DGTL's NOx emissions",
-    "Fresh water use": "Festival systems responsible for DGTL's fresh water usage",
-    "Chemical pollution": "Festival systems responsible for DGTL's chemical pollution",
-    "Residual waste": "Festival systems responsible for DGTL's residual waste"
-    };*/
-
 var svg;
 var width;
 var height;
 var canvas;
+var params;
 
 
 d3.csv(dataFile, function(error, data){
@@ -439,13 +432,12 @@ function appendAxisTitle (data) {
 /*    if (data != undefined) {*/
     // adding x and y axis labels
    var svg = d3.select("#stackedbarchart").selectAll('svg');
-   console.log(svg);
 /*        console.log(metadata[data].yTitle);*/
      svg.append("text")
          .attr("id", "yAxisTitle")
       .attr("transform", "rotate(-90)")
       .attr("y", 0 + 10)
-      .attr("x",0 - (height/3))
+      .attr("x",0 - (height/4))
       .attr("dy", "1em")
       .style("text-anchor", "middle")
       .text(metadata[data].yTitle);

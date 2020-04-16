@@ -4,8 +4,8 @@ var dataFiles = {'CO2': 'CO2-doughnut.csv',
                 'Chemical pollution': 'Chemical-doughnut.csv',
                 'Fresh water use': 'wastewater-doughnut.csv',
                 'Residual waste': 'waste-doughnut.csv'};
-var width = 450,
-    height = 450,
+var width = 550,
+    height = 550,
     barHeight = height / 2 - 30;
 
 var svg2 = d3.select("#stackedbarchart").selectAll("svg")
@@ -76,6 +76,7 @@ d3.csv("data.csv", function(error, data) {
             drawBars(input, canvas);
             appendTitle(d.name);
             appendAxisTitle(d.name);
+            $('#toggleBox').show();
         });
         })
           .each(function(d) { d.outerRadius = 0; })
