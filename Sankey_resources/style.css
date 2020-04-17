@@ -2,6 +2,7 @@ body {
       font-family: Raleway;
       color: #E8E6E6;
       fill: #E8E6E6;
+    background-color: black;
     }
 
     #chart {
@@ -36,6 +37,9 @@ body {
     }
 
     text#DGTL {
-      background: url(/img/DGTL-logo.jpeg) no-repeat;
-      fill: url(/img/DGTL-logo.jpeg) no-repeat;
+      display: none;
+    }
+
+    #rect#DGTL{
+        fill: white;
     }

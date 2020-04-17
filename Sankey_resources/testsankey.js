@@ -153,6 +153,9 @@ var margin = {
 
 
       node.append("rect")
+          .attr("id", function (d) {
+              return "rect#" + d.name;
+          })
         .attr("height", function(d) {
           return d.dy;
         })
@@ -187,9 +190,13 @@ var margin = {
 
         var test = d3.select("svg").append('svg')
         .append('svg:image')
-        .attr('xlink:href', 'https://fuzz-mag.be/sites/default/files/u16992/DGTL_LOGO_LINE_B-01.jpg')
-        .attr("width", 65.5)
+        .attr('xlink:href', 'https://florindevessies.github.io/livinglab/Sankey_resources/img/DGTL-2019.png')
+        .attr("width", 45.5)
         .attr("height", 100)
-        .attr("x", 495)
-        .attr("y", 167);
+        .attr("x", 551)
+        .attr("y", 165);
+
+
+        var test = d3.select("rect#DGTL")
+            .style('fill', 'white');
         });
