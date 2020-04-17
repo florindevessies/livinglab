@@ -4,8 +4,8 @@ var dataFiles = {'CO2': 'CO2-doughnut.csv',
                 'Chemical pollution': 'Chemical-doughnut.csv',
                 'Fresh water use': 'wastewater-doughnut.csv',
                 'Residual waste': 'waste-doughnut.csv'};
-var width = 550,
-    height = 550,
+var width = 500,
+    height = 500,
     barHeight = height / 2 - 30;
 
 var svg2 = d3.select("#stackedbarchart").selectAll("svg")

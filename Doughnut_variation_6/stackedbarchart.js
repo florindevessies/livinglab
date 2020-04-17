@@ -23,7 +23,7 @@ var params;
 
 
 d3.csv(dataFile, function(error, data){
-    var input = {'data': data, 'width': 550, 'height': 300};
+    var input = {'data': data, 'width': 500, 'height': 300};
     canvas = setUpSvgCanvas(input);
 });
 
