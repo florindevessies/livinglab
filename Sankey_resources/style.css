@@ -1,5 +1,7 @@
 body {
-      font-family: Helvetica, Arial;
+      font-family: Raleway;
+      color: #E8E6E6;
+      fill: #E8E6E6;
     }
 
     #chart {
@@ -20,7 +22,7 @@ body {
 
     .link {
       fill: none;
-      stroke: #000;
+      stroke: #FFF;
       stroke-opacity: .12;
     }
 
@@ -31,4 +33,9 @@ body {
 
     h1 {
       font-size: 1.4rem;
+    }
+
+    text#DGTL {
+      background: url(/img/DGTL-logo.jpeg) no-repeat;
+      fill: url(/img/DGTL-logo.jpeg) no-repeat;
     }

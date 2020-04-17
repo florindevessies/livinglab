@@ -1,3 +1,4 @@
+
 var margin = {
         top: 1,
         right: 1,
@@ -36,8 +37,7 @@ var margin = {
         .nodes(resources.nodes)
         .links(resources.links)
         .layout(32);
-/*console.log(resources.nodes);
-console.log(resources.links);*/
+
       function setDash(d) {
         var d3this = d3.select(this);
         var totalLength = d3this.node().getTotalLength();
@@ -133,18 +133,13 @@ console.log(resources.links);*/
       var node = svg.append("g").selectAll(".node")
         .data(resources.nodes)
         .enter().append("g")
-        .attr("class", "node")
+        .attr("class", function(d){ 
+        	return "node node-" + d.name.replace(" ", "_");
+        })
         .attr("transform", function(d) {
           return "translate(" + d.x + "," + d.y + ")";
         })
-/*        .call(d3.drag()
-        .subject(function(d) {
-          return d;
-        })
-        .on("start", function() {
-          this.parentNode.appendChild(this);
-        })
-        .on("drag", dragmove))*/
+
         .on("mouseover", branchAnimate)
         .on("mouseout", function() {
           //cancel all transitions by making a new one
@@ -171,6 +166,9 @@ console.log(resources.links);*/
         });
 
       node.append("text")
+        .attr("id", function(d){
+          return d.name;
+        })
         .attr("x", -6)
         .attr("y", function(d) {
           return d.dy / 2;
@@ -178,7 +176,7 @@ console.log(resources.links);*/
         .attr("dy", ".35em")
         .attr("text-anchor", "end")
         .attr("transform", null)
-        .text(function(d) {
+        .html(function(d) {
           return d.name;
         })
         .filter(function(d) {
@@ -187,17 +185,12 @@ console.log(resources.links);*/
         .attr("x", 6 + sankey.nodeWidth())
         .attr("text-anchor", "start");
 
+        var test = d3.select("svg").append('svg')
+        .style("background","url('https://www.google.nl/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png') no-repeat")
+        .append('svg:image')
+    .attr('xlink:href', '/img/DGTL-logo.jpeg')
+    .attr("width", 65.5)
+    .attr("height", 100)
+    .attr("x", 495)
+    .attr("y", 167);
     });
-
-// the function for moving the nodes
-/*  function dragmove(d) {
-    d3.select(this)
-      .attr("transform", 
-            "translate(" 
-               + d.x + "," 
-               + (d.y = Math.max(
-                  0, Math.min(height - d.dy, d3.event.y))
-                 ) + ")");
-    sankey.relayout();
-    link.attr("d", path);
-  }*/
