@@ -190,7 +190,7 @@ var margin = {
 
         var test = d3.select("svg").append('svg')
         .append('svg:image')
-        .attr('xlink:href', 'https://florindevessies.github.io/livinglab/Sankey_resources/img/DGTL-2019.png')
+        .attr('xlink:href', 'https://florindevessies.github.io/livinglab/Sankey_resources/img/DGTL-2019.PNG')
         .attr("width", 45.5)
         .attr("height", 100)
         .attr("x", 551)
