@@ -186,11 +186,10 @@ var margin = {
         .attr("text-anchor", "start");
 
         var test = d3.select("svg").append('svg')
-        .style("background","url('https://www.google.nl/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png') no-repeat")
         .append('svg:image')
-    .attr('xlink:href', '/img/DGTL-logo.jpeg')
-    .attr("width", 65.5)
-    .attr("height", 100)
-    .attr("x", 495)
-    .attr("y", 167);
-    });
+        .attr('xlink:href', 'https://fuzz-mag.be/sites/default/files/u16992/DGTL_LOGO_LINE_B-01.jpg')
+        .attr("width", 65.5)
+        .attr("height", 100)
+        .attr("x", 495)
+        .attr("y", 167);
+        });
