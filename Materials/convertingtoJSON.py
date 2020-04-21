@@ -1,3 +1,5 @@
+# file that converts the data of the csv file to .json
+
 import csv
 import json
 
