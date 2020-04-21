@@ -1,3 +1,8 @@
+/*
+Script for the resources sankey  datavisualisation for DGTL festival
+Based on the example of Alex Holachek (https://bl.ocks.org/aholachek/5df1a95afe871be868360f312d35d057)
+Edited for this context by DGTL x AMS LL
+*/
 
 var margin = {
         top: 1,
@@ -190,7 +195,7 @@ var margin = {
 
         var test = d3.select("svg").append('svg')
         .append('svg:image')
-        .attr('xlink:href', 'https://florindevessies.github.io/livinglab/Sankey_resources/img/DGTL-2019.PNG')
+        .attr('xlink:href', 'https://florindevessies.github.io/livinglab/Materials/img/DGTL-2019.PNG')
         .attr("width", 45.5)
         .attr("height", 100)
         .attr("x", 551)

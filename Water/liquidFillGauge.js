@@ -1,10 +1,8 @@
-/*!
- * @license Open source under BSD 2-clause (http://choosealicense.com/licenses/bsd-2-clause/)
- * Copyright (c) 2015, Curtis Bratton
- * All rights reserved.
- *
- * Liquid Fill Gauge v1.1
- */
+/*
+Script for the animated water visualisation for DGTL festival
+Based on the visual of Curtis Bratton (2015) (http://bl.ocks.org/brattonc/5e5ce9beee483220e2f6)
+Edited for this context by DGTL x AMS LL
+*/
     var svg = d3.select("fillgauge1")
     .append("fillgauge1-title"); 
 
