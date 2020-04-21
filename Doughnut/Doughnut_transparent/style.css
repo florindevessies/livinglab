@@ -1,0 +1,126 @@
+body {
+    font-family: Raleway;
+    font-weight: lighter;
+    stroke: #E8E6E6;
+    stroke-width: 0px;
+     color: #E8E6E6;
+    fill: #E8E6E6;
+    background-color: black;
+}
+
+h3 {
+    margin-left: 130px;
+}
+/***************************************
+Doughnut layout
+***************************************/
+#doughnut svg {
+  stroke: #E8E6E6;
+}
+
+g.labels textPath {
+    fill: #E8E6E6;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #E8E6E6;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.segments {
+  opacity: 1;
+}
+circle {
+  stroke: #E8E6E6;
+  fill: none;
+  stroke-width: .5px;
+}
+/* add different boundary at circle 1 */
+
+#circle-1 {
+  stroke-width: 10px;
+  stroke: green;
+}
+
+#circle-3 {
+  stroke-width: 2px;
+  stroke: #E8E6E6;
+}
+
+/***************************************
+Stacked barchart layout
+***************************************/
+
+#myCheckbox {
+    margin-top: 4%;
+    margin-left: 10%;
+}
+
+#stackedbarchart p{
+  font-family: Raleway;
+    font-weight: lighter;
+    font-size: 10px;
+  stroke: #E8E6E6;
+}
+
+.tick line{
+    stroke: #E8E6E6;
+    stroke-width: 1px;
+}
+.tick text {
+    font-family: Raleway;
+    font-size: 10px;
+    font-weight: light;
+    fill: #E8E6E6;
+    stroke-width: 0px;
+}
+
+path.domain {
+    stroke: #E8E6E6;
+    stroke-width:0px;
+}
+g.axisY path {
+    fill: none;
+    stroke: #E8E6E6;
+    stroke-width: 1px;
+}
+
+g.axisX path {
+    fill: none;
+    stroke: #E8E6E6;
+    stroke-width: 1px;
+
+}
+
+g.axisX {
+    font-family: Raleway;
+    font-size: 10px;
+    stroke: #E8E6E6;
+    fill: #E8E6E6;
+}
+
+g.legend text{
+    font-weight: light;
+    font-size: 14px;
+    fill: #E8E6E6;
+    stroke-width: 0px;
+}
+
+#nodata {
+    text-align: center;
+    fill: #E8E6E6;
+    stroke-width: 0px;
+    width: 80%;
+    margin-top: 40px;
+}
+
+#barchartTitle {
+    padding-left: 10px;
+}
+
