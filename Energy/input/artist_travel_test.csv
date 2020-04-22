@@ -1,0 +1,3 @@
+artist;start_lat;start_lon;end_lat;end_lon;from;to;mode;modecolor;id;stroke
+Green Velvet;53.35233;-2.27166;52.30768;4.76742;Manchester (MAN);Amsterdam Schiphol (AMS);Flight;#0080FF80;1;2
+Andhim;50.90969;-1.40435;52.30768;4.76742;Southampton (SOU);Amsterdam Schiphol (AMS);Flight;#0080FF80;2;2

@@ -1,15 +1,13 @@
-#   Script for the energy map datavisualisation for DGTL festival
-# Edited for this context by DGTL x AMS LL
-
-
 library(sf)
 library(sp)
 library(mapdeck)
 library(plotly)
 
+# NOTE: set the working directory to the folder of this source file
+# for example: setwd("C:/Users/flori/Desktop/livinglab/Energy")
 
 
-# Make sure your shapefile is in wgs84 projection. This is what mapdeck and leaflet use
+# Make sure your shapefile is in wgs84 projection. This is what mapdeck and leaflet 
 
 dgtl <- st_read("input/dgtlAll.shp")
 flows2 <- read.csv("input/energyflows.csv", sep = ";")
@@ -49,54 +47,54 @@ dgtl[19,"color"]<- "#FBBE4F"
 dgtl[20,"color"]<- "#FBBE4F"
 dgtl[21,"color"]<- "#FBBE4F"
 
-dgtl[22,"color"]<- "#737574"
-dgtl[23,"color"]<- "#186134"
-dgtl[24,"color"]<- "#186134"
-dgtl[25,"color"]<- "#186134"
-dgtl[26,"color"]<- "#186134"
-dgtl[27,"color"]<- "#186134"
+dgtl[22,"color"]<- "#E96D24"
+dgtl[23,"color"]<- "#71Be6B"
+dgtl[24,"color"]<- "#71Be6B"
+dgtl[25,"color"]<- "#71Be6B"
+dgtl[26,"color"]<- "#71Be6B"
+dgtl[27,"color"]<- "#71Be6B"
 
 flows2$color_from <- "color"
-flows2[1,"color_from"] <- "#14f593"
-flows2[2,"color_from"] <- "#14f593"
-flows2[3,"color_from"] <- "#14f593"
-flows2[4,"color_from"] <- "#fa0505"
-flows2[5,"color_from"] <- "#14f593"
-flows2[6,"color_from"] <- "#14f593"
-flows2[7,"color_from"] <- "#14f593"
-flows2[8,"color_from"] <- "#14f593"
-flows2[9,"color_from"] <- "#14f593"
-flows2[10,"color_from"] <- "#fa0505"
-flows2[11,"color_from"] <- "#fa0505"
-flows2[12,"color_from"] <- "#14f593"
-flows2[13,"color_from"] <- "#14f593"
-flows2[14,"color_from"] <- "#14f593"
-flows2[15,"color_from"] <- "#fa0505"
-flows2[16,"color_from"] <- "#14f593"
-flows2[17,"color_from"] <- "#14f593"
-flows2[18,"color_from"] <- "#14f593"
-flows2[19,"color_from"] <- "#14f593"
+flows2[1,"color_from"] <- "#71Be6B"
+flows2[2,"color_from"] <- "#71Be6B"
+flows2[3,"color_from"] <- "#71Be6B"
+flows2[4,"color_from"] <- "#E96D24"
+flows2[5,"color_from"] <- "#71Be6B"
+flows2[6,"color_from"] <- "#71Be6B"
+flows2[7,"color_from"] <- "#71Be6B"
+flows2[8,"color_from"] <- "#71Be6B"
+flows2[9,"color_from"] <- "#71Be6B"
+flows2[10,"color_from"] <- "#E96D24"
+flows2[11,"color_from"] <- "#E96D24"
+flows2[12,"color_from"] <- "#71Be6B"
+flows2[13,"color_from"] <- "#71Be6B"
+flows2[14,"color_from"] <- "#71Be6B"
+flows2[15,"color_from"] <- "#E96D24"
+flows2[16,"color_from"] <- "#71Be6B"
+flows2[17,"color_from"] <- "#71Be6B"
+flows2[18,"color_from"] <- "#71Be6B"
+flows2[19,"color_from"] <- "#71Be6B"
 
 flows2$color_to <- "color"
-flows2[1,"color_to"] <- "#14f593"
-flows2[2,"color_to"] <- "#14f593"
-flows2[3,"color_to"] <- "#14f593"
-flows2[4,"color_to"] <- "#fa0505"
-flows2[5,"color_to"] <- "#14f593"
-flows2[6,"color_to"] <- "#14f593"
-flows2[7,"color_to"] <- "#14f593"
-flows2[8,"color_to"] <- "#14f593"
-flows2[9,"color_to"] <- "#14f593"
-flows2[10,"color_to"] <- "#fa0505"
-flows2[11,"color_to"] <- "#fa0505"
-flows2[12,"color_to"] <- "#14f593"
-flows2[13,"color_to"] <- "#14f593"
-flows2[14,"color_to"] <- "#14f593"
-flows2[15,"color_to"] <- "#fa0505"
-flows2[16,"color_to"] <- "#14f593"
-flows2[17,"color_to"] <- "#14f593"
-flows2[18,"color_to"] <- "#14f593"
-flows2[19,"color_to"] <- "#14f593"
+flows2[1,"color_to"] <- "#71Be6B"
+flows2[2,"color_to"] <- "#71Be6B"
+flows2[3,"color_to"] <- "#71Be6B"
+flows2[4,"color_to"] <- "#E96D24"
+flows2[5,"color_to"] <- "#71Be6B"
+flows2[6,"color_to"] <- "#71Be6B"
+flows2[7,"color_to"] <- "#71Be6B"
+flows2[8,"color_to"] <- "#71Be6B"
+flows2[9,"color_to"] <- "#71Be6B"
+flows2[10,"color_to"] <- "#E96D24"
+flows2[11,"color_to"] <- "#E96D24"
+flows2[12,"color_to"] <- "#71Be6B"
+flows2[13,"color_to"] <- "#71Be6B"
+flows2[14,"color_to"] <- "#71Be6B"
+flows2[15,"color_to"] <- "#E96D24"
+flows2[16,"color_to"] <- "#71Be6B"
+flows2[17,"color_to"] <- "#71Be6B"
+flows2[18,"color_to"] <- "#71Be6B"
+flows2[19,"color_to"] <- "#71Be6B"
 
 
 dgtl$fill_opacity <- 225
@@ -170,4 +168,3 @@ add_arc(
   , stroke_to = "color_to" 
     , stroke_width = "stroke"
   , update_view = FALSE)
-
