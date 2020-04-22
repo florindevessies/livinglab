@@ -3,39 +3,49 @@ Script for the animated water visualisation for DGTL festival
 Based on the visual of Curtis Bratton (2015) (http://bl.ocks.org/brattonc/5e5ce9beee483220e2f6)
 Edited for this context by DGTL x AMS LL
 */
-    var svg = d3.select("fillgauge1")
-    .append("fillgauge1-title"); 
 
-    var gauge1 = loadLiquidFillGauge("fillgauge1", 100);
-    var config1 = liquidFillGaugeDefaultSettings();
-    config1.minValue = 100;
-    config1.maxValue = 0;
-    config1.textVertPosition = 0.52;
-    config1.waveHeight = 0;
-    config1.waveAnimate = true;
-    config1.waveOffset = 0.25;
-    config1.minValue = 0;
-    config1.maxValue = 100;
+// create the svg for the first gauge
+var svg = d3.select("fillgauge1")
+.append("fillgauge1-title");
 
-    function drawFillGauge2() {
-        d3.select("#fillgauge2").selectAll('g').remove();
-        $('#text2').slideToggle();
-        var gauge2= loadLiquidFillGauge("fillgauge2", 91);
-    }
-    function drawFillGauge3() {
-        d3.select("#fillgauge3").selectAll('g').remove();
-        $('#text3').slideToggle();
-        var gauge3 = loadLiquidFillGauge("fillgauge3", 9);
-    }
+// change the VALUE in the gauge1 variable if the gauge should fill up to another level
+var gauge1 = loadLiquidFillGauge("fillgauge1", 100);
+var config1 = liquidFillGaugeDefaultSettings();
+config1.minValue = 100;
+config1.maxValue = 0;
+config1.textVertPosition = 0.52;
+config1.waveHeight = 0;
+config1.waveAnimate = true;
+config1.waveOffset = 0.25;
+config1.minValue = 0;
+config1.maxValue = 100;
 
-    
-    function NewValue(){
-        if(Math.random() > .5){
-            return Math.round(Math.random()*100);
-        } else {
-            return (Math.random()*100).toFixed(1);
-        }
+// function that draws the second gauge and shows the text accordingly.
+// the text can be changed in the index.html
+function drawFillGauge2() {
+    d3.select("#fillgauge2").selectAll('g').remove();
+    $('#text2').slideToggle();
+    // change the VALUE in the gauge2 variable if the gauge should fill up to another level
+    var gauge2= loadLiquidFillGauge("fillgauge2", 91);
+}
+
+// function that draws the third gauge and shows the text accordingly.
+// the text can be changed in the index.html
+function drawFillGauge3() {
+    d3.select("#fillgauge3").selectAll('g').remove();
+    $('#text3').slideToggle();
+    // change the VALUE in the gauge3 variable if the gauge should fill up to another level
+    var gauge3 = loadLiquidFillGauge("fillgauge3", 9);
+}
+
+
+function NewValue(){
+    if(Math.random() > .5){
+        return Math.round(Math.random()*100);
+    } else {
+        return (Math.random()*100).toFixed(1);
     }
+}
 
 function liquidFillGaugeDefaultSettings(){
     return {
